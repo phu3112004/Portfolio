@@ -1,6 +1,17 @@
 {
-  "name": "Phu Tran",
+  "name": "Portfolio",
   "home": "Home",
   "about": "About Me",
-  "project": "Projects"
+  "project": "Projects",
+  "footer": "© 2024 Phu Tran. All rights reserved.",
+  "hero": {
+    "title": "Hi there!",
+    "subtitle": "I'm",
+    "name": "Phu Tran",
+    "description": "Web Developer",
+    "button": {
+      "skill": "My Skills",
+      "get": "Get Resume"
+    }
+  }
 }

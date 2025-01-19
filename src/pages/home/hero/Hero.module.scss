@@ -1,0 +1,165 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 100px;
+  padding: 100px;
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+  }
+
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    z-index: 2;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      gap: 30px;
+    }
+    .hello {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font-size: 50px;
+        font-weight: 700;
+        @media screen and (max-width: 768px) {
+          font-size: 40px;
+        }
+        & > span {
+          color: var(--primary) !important;
+        }
+      }
+      .title {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+        gap: 10px;
+        .img {
+          width: 50px;
+          height: 50px;
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .description {
+        display: inline-block;
+        width: fit-content;
+        & > h2 {
+          color: var(--light-green);
+          overflow: hidden;
+          border-right: 0.15em solid var(--orange);
+          white-space: nowrap;
+          animation: typing 1.5s steps(20, end) forwards infinite;
+          font-size: 24px;
+          padding-right: 20px;
+          width: 0;
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+          }
+          @keyframes typing {
+            from {
+              width: 0;
+            }
+            to {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .media {
+      display: flex;
+      gap: 20px;
+      & > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: 20px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: var(--primary-dark);
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 30px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      & > button {
+        padding: 16px 24px;
+        border-radius: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        gap: 10px;
+        display: flex;
+        border: 1px solid var(--primary);
+        text-transform: uppercase;
+      }
+      .primary {
+        color: var(--primary);
+        background: transparent;
+
+        &:hover {
+          background-color: var(--primary);
+          color: var(--white);
+        }
+      }
+      .secondary {
+        color: var(--white);
+        background: linear-gradient(to right, var(--primary), var(--orange));
+
+        &:hover {
+          background: linear-gradient(to left, var(--primary), var(--orange));
+          opacity: 0.9;
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .img {
+    width: 50%;
+    z-index: 2;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    & > img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

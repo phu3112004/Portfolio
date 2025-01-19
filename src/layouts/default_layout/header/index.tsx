@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "contexts/theme_context";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import { useState, useEffect } from "react";
@@ -18,6 +18,7 @@ function Header() {
   const { theme, toggleTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const [isShowMenu, setIsShowMenu] = useState<boolean>(true);
+  const location = useLocation();
 
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -32,6 +33,21 @@ function Header() {
       setIsShowMenu(false);
     }
   }, []);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === "dark") {
+      root.style.setProperty("--border-bottom-color", "var(--blueberry)");
+    } else {
+      root.style.setProperty("--border-bottom-color", "var(--white");
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setIsShowMenu(false);
+    }
+  }, [location]);
   return (
     <>
       <header
@@ -55,8 +71,8 @@ function Header() {
                 style={({ isActive }) => ({
                   color: isActive
                     ? theme === "dark"
-                      ? "white"
-                      : "black"
+                      ? "var(--white)"
+                      : "var(--black)"
                     : "gray",
                 })}
               >
@@ -69,8 +85,8 @@ function Header() {
                 style={({ isActive }) => ({
                   color: isActive
                     ? theme === "dark"
-                      ? "white"
-                      : "black"
+                      ? "var(--white)"
+                      : "var(--black)"
                     : "gray",
                 })}
               >
@@ -83,8 +99,8 @@ function Header() {
                 style={({ isActive }) => ({
                   color: isActive
                     ? theme === "dark"
-                      ? "white"
-                      : "black"
+                      ? "var(--white)"
+                      : "var(--black)"
                     : "gray",
                 })}
               >
@@ -98,7 +114,7 @@ function Header() {
             <li>
               <button className={cx("mode")} onClick={toggleTheme}>
                 <FontAwesomeIcon
-                  color={theme === "dark" ? "white" : "black"}
+                  color={theme === "dark" ? "var(--white)" : "var(--black)"}
                   icon={theme === "light" ? faSun : faMoon}
                 />
               </button>
@@ -125,12 +141,15 @@ function Header() {
               <ul
                 className={cx("language__submenu")}
                 style={{
-                  backgroundColor: theme === "dark" ? "#18102e" : "white",
+                  backgroundColor:
+                    theme === "dark" ? "var(--blueberry)" : "var(--white)",
                 }}
               >
                 <li
                   onClick={() => handleLanguageChange("en")}
-                  style={{ color: theme === "dark" ? "white" : "black" }}
+                  style={{
+                    color: theme === "dark" ? "var(--white)" : "var(--black)",
+                  }}
                 >
                   <img
                     src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-800.png"
@@ -140,7 +159,9 @@ function Header() {
                 </li>
                 <li
                   onClick={() => handleLanguageChange("vi")}
-                  style={{ color: theme === "dark" ? "white" : "black" }}
+                  style={{
+                    color: theme === "dark" ? "var(--white)" : "var(--black)",
+                  }}
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1200px-Flag_of_Vietnam.svg.png"
@@ -150,7 +171,9 @@ function Header() {
                 </li>
                 <li
                   onClick={() => handleLanguageChange("ja")}
-                  style={{ color: theme === "dark" ? "white" : "black" }}
+                  style={{
+                    color: theme === "dark" ? "var(--white)" : "var(--black)",
+                  }}
                 >
                   <img
                     src="https://cdn.countryflags.com/thumbs/japan/flag-800.png"

@@ -1,6 +1,17 @@
 {
-  "name": "Phú Trần",
+  "name": "Hồ sơ",
   "home": "Trang chủ",
   "about": "Giới thiệu",
-  "project": "Dự án"
+  "project": "Dự án",
+  "footer": "© 2024 Phú Trần. Tất cả các quyền được bảo lưu.",
+  "hero": {
+    "title": "Xin chào!",
+    "subtitle": "Tôi là",
+    "name": "Phú Trần",
+    "description": "Lập trình viên Web",
+    "button": {
+      "skill": "Xem kỹ năng",
+      "get": "Tải CV"
+    }
+  }
 }
