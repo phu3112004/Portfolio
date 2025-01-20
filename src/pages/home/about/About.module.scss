@@ -1,0 +1,111 @@
+.about {
+  padding: 50px 100px 100px 100px;
+  @media screen and (max-width: 1023px) {
+    padding: 50px 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 50px;
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .content {
+      width: 65%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        gap: 30px;
+      }
+
+      .title {
+        text-transform: uppercase;
+        line-height: 1.5;
+      }
+
+      .content-image {
+        display: none;
+        @media screen and (max-width: 1023px) {
+          display: block;
+          width: 100%;
+          height: 100%;
+          & > img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+          }
+        }
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+        line-height: 2;
+      }
+    }
+
+    .image {
+      width: 35%;
+      height: 100%;
+      display: flex;
+      gap: 20px;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+
+      .img {
+        width: 85%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .link {
+        width: 15%;
+        background-color: var(--purple);
+        color: var(--white);
+        border-radius: 5px;
+        writing-mode: vertical-rl;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 2px;
+          height: 350%;
+          background: linear-gradient(
+            180deg,
+            var(--purple) 0%,
+            var(--primary) 100%
+          );
+          position: absolute;
+          top: 100%;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+.highlight {
+  color: var(--primary) !important;
+}

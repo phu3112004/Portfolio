@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./Hero.module.scss";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "contexts/theme_context";
-import { hero, heroBackground } from "assets/index";
+import { heroBackground } from "assets/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -10,13 +10,41 @@ import {
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDownload, faFire } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDownload,
+  faFire,
+  faCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { okaidia, coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const cx = classNames.bind(styles);
-
 const Hero: React.FC = () => {
   const { t } = useTranslation();
   const { theme } = useTheme();
+  const codeString = `
+  const developer = {
+    name: '${t("hero.name")}',
+    skills: ['React', 'Redux', 'NextJS', 'NodeJS',
+    'NestJS', 'NoSQL', 'SQL'],
+    hardworker: true,
+    quickLearner: true,
+    problemSolver: true,
+    hireable: function() {
+      return (
+        this.hardworker && 
+        this.problemSolver && 
+        this.skills.length >= 5
+      );
+    }
+  };
+  `;
+  const handleGetResume = () => {
+    window.open(
+      "https://drive.google.com/file/d/16MkloixyLGnSLUb3mkhbWU3RQDCn9MCr/view?usp=sharing",
+      "_blank"
+    );
+  };
 
   return (
     <>
@@ -86,18 +114,45 @@ const Hero: React.FC = () => {
             </a>
           </div>
           <div className={cx("buttons")}>
-            <button className={cx("primary")}>
+            <button
+              className={cx("primary")}
+              onClick={() =>
+                document
+                  .getElementById("skill-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               {t("hero.button.skill")}
               <FontAwesomeIcon icon={faFire} />
             </button>
-            <button className={cx("secondary")}>
+            <button onClick={handleGetResume} className={cx("secondary")}>
               {t("hero.button.get")}
               <FontAwesomeIcon icon={faDownload} />
             </button>
           </div>
         </div>
-        <div className={cx("img")}>
-          <img src={hero} alt="hero" />
+        <div className={cx("code")}>
+          <div
+            className={cx("bar")}
+            style={{
+              backgroundColor:
+                theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
+            }}
+          >
+            <FontAwesomeIcon icon={faCircle} className={cx("circle")} />
+            <FontAwesomeIcon icon={faCircle} className={cx("circle")} />
+            <FontAwesomeIcon icon={faCircle} className={cx("circle")} />
+          </div>
+          <SyntaxHighlighter
+            language="javascript"
+            style={theme === "dark" ? okaidia : coy}
+            customStyle={{
+              backgroundColor:
+                theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
+            }}
+          >
+            {codeString}
+          </SyntaxHighlighter>
         </div>
         <img className={cx("background")} src={heroBackground} alt="hero" />
       </div>

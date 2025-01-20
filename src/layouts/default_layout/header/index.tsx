@@ -19,14 +19,23 @@ function Header() {
   const { t, i18n } = useTranslation();
   const [isShowMenu, setIsShowMenu] = useState<boolean>(true);
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleLanguageChange = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
-  const showMenu = () => {
-    setIsShowMenu(!isShowMenu);
-  };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (window.innerWidth <= 768) {
@@ -48,12 +57,33 @@ function Header() {
       setIsShowMenu(false);
     }
   }, [location]);
+
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+    if (window.innerWidth <= 768) {
+      setIsShowMenu(false);
+    }
+  };
+
+  const showMenu = () => {
+    setIsShowMenu(!isShowMenu);
+  };
+
+  const handleChangeMode = () => {
+    toggleTheme();
+    if (window.innerWidth <= 768) {
+      setIsShowMenu(false);
+    }
+  };
+
   return (
     <>
       <header
         style={{
-          backgroundColor: theme === "dark" ? "#0e091c" : "#f0f0f0",
+          backgroundColor:
+            theme === "dark" ? "var(--dark-blue)" : "var(--white)",
           display: isShowMenu ? "flex" : "none",
+          boxShadow: isScrolled ? "0 2px 4px rgba(37, 37, 37, 0.1)" : "none",
         }}
         className={cx("header")}
       >
@@ -112,7 +142,7 @@ function Header() {
         <div className={cx("header__action")}>
           <ul>
             <li>
-              <button className={cx("mode")} onClick={toggleTheme}>
+              <button className={cx("mode")} onClick={handleChangeMode}>
                 <FontAwesomeIcon
                   color={theme === "dark" ? "var(--white)" : "var(--black)"}
                   icon={theme === "light" ? faSun : faMoon}
@@ -188,8 +218,10 @@ function Header() {
       </header>
       <header
         style={{
-          backgroundColor: theme === "dark" ? "#0e091c" : "#f0f0f0",
+          backgroundColor:
+            theme === "dark" ? "var(--dark-blue)" : "var(--white)",
           display: isShowMenu ? "none" : "flex",
+          boxShadow: isScrolled ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none",
         }}
         className={cx("header__mobile")}
       >

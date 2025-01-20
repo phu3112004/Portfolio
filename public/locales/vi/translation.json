@@ -3,7 +3,9 @@
   "home": "Trang chủ",
   "about": "Giới thiệu",
   "project": "Dự án",
-  "footer": "© 2024 Phú Trần. Tất cả các quyền được bảo lưu.",
+  "footer": "© 2025 Phú Trần. Tất cả các quyền được bảo lưu.",
+  "experience": "Kinh nghiệm",
+  "skill": "Kỹ năng",
   "hero": {
     "title": "Xin chào!",
     "subtitle": "Tôi là",
@@ -12,6 +14,49 @@
     "button": {
       "skill": "Xem kỹ năng",
       "get": "Tải CV"
+    }
+  },
+  "about-me": {
+    "title": {
+      "let": "tôi xin ",
+      "introduce": "giới thiệu ",
+      "myself": "về bản thân"
+    },
+    "description": {
+      "line1": "Tôi tốt nghiệp từ Trường Đại học Công nghệ Thông tin, Thành phố Hồ Chí Minh.",
+      "line2": {
+        "part1": "Tôi tự học cơ bản về ",
+        "part2": "HTML",
+        "part3": "CSS ",
+        "part4": "và ",
+        "part5": "JavaScript",
+        "part6": ", cũng đã hoàn thành một số dự án nhỏ."
+      },
+      "line3": {
+        "part1": "Hiện tại, tôi đang học ",
+        "part2": "React JS",
+        "part3": ", ",
+        "part4": "Node JS ",
+        "part5": "để nâng cao kỹ năng lập trình web của mình."
+      },
+      "line4": "Ngoài việc lập trình, tôi thích đi du lịch để khám phá những nơi mới, tìm hiểu về các văn hóa khác nhau và thử các món ăn địa phương."
+    }
+  },
+  "cards": {
+    "card1": {
+      "time": "Tháng 1, 2025",
+      "title": "Lập trình viên Front-end",
+      "company": "Freelancer tại Phòng khám răng Thiên Sứ Noma"
+    },
+    "card2": {
+      "time": "Tháng 7, 2025 - Tháng 8, 2025",
+      "title": "Lập trình viên Front-end",
+      "company": "Thực tập tại Sun* Inc"
+    },
+    "card3": {
+      "time": "Tháng 7, 2026 - Hiện tại",
+      "title": "Lập trình viên Front-end",
+      "company": "Nhân viên chính thức tại MISUMI"
     }
   }
 }

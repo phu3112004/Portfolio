@@ -3,7 +3,9 @@
   "home": "Home",
   "about": "About Me",
   "project": "Projects",
-  "footer": "© 2024 Phu Tran. All rights reserved.",
+  "footer": "© 2025 Phu Tran. All rights reserved.",
+  "experience": "Experiences",
+  "skill": "Skills",
   "hero": {
     "title": "Hi there!",
     "subtitle": "I'm",
@@ -12,6 +14,49 @@
     "button": {
       "skill": "My Skills",
       "get": "Get Resume"
+    }
+  },
+  "about-me": {
+    "title": {
+      "let": "Let Me ",
+      "introduce": "introduce ",
+      "myself": "about myself"
+    },
+    "description": {
+      "line1": "I was graduated from the University of Information Technology, Ho Chi Minh City.",
+      "line2": {
+        "part1": "I have self-taught basic ",
+        "part2": "HTML",
+        "part3": "CSS ",
+        "part4": "and ",
+        "part5": "JavaScript",
+        "part6": ", completing several small projects along the way."
+      },
+      "line3": {
+        "part1": "Currently, I am learning ",
+        "part2": "React JS",
+        "part3": ", ",
+        "part4": "Node JS ",
+        "part5": "to enhance my web programing skills."
+      },
+      "line4": "Besides coding, I enjoy traveling to explore new places, learn about different cultures, and try regional cuisines."
+    }
+  },
+  "cards": {
+    "card1": {
+      "time": "Jan 2025",
+      "title": "Front-end Developer",
+      "company": "Freelancer at Noma Dental Office Tenjin"
+    },
+    "card2": {
+      "time": "July 2025 - August 2025",
+      "title": "Front-end Developer",
+      "company": "Internship at Sun* Inc"
+    },
+    "card3": {
+      "time": "July 2026 - Present",
+      "title": "Front-end Developer",
+      "company": "Official staff at MISUMI Inc"
     }
   }
 }

@@ -1,4 +1,10 @@
-import React, { createContext, useState, useContext, ReactNode } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  ReactNode,
+  useEffect,
+} from "react";
 
 // Kiểu dữ liệu của ThemeContext
 interface ThemeContextType {
@@ -21,12 +27,20 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<string>("light");
+  // Đọc theme từ localStorage khi khởi tạo
+  const savedTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState<string>(savedTheme || "light");
 
   // Hàm để chuyển đổi theme
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
   };
+
+  // Lưu theme vào localStorage mỗi khi nó thay đổi
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
