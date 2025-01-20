@@ -3,9 +3,10 @@
   "home": "Home",
   "about": "About Me",
   "project": "Projects",
-  "footer": "© 2025 Phu Tran. All rights reserved.",
   "experience": "Experiences",
   "skill": "Skills",
+  "some": "Some of my ",
+  "sub-project": "Here are some recent projects I've completed.",
   "hero": {
     "title": "Hi there!",
     "subtitle": "I'm",
@@ -58,5 +59,37 @@
       "title": "Front-end Developer",
       "company": "Official staff at MISUMI Inc"
     }
+  },
+  "projects": {
+    "project1": {
+      "title": "PDF Malware Detection Web",
+      "description": "A web application that helps users to detect malware in their files. The application uses machine learning algorithms to analyze the files and provide the result. The application is built with React JS, Node JS, and Python. The application will be integrated with the VirusTotal API."
+    },
+    "project2": {
+      "title": "Blog Website",
+      "description": "A blog website that allows users to read and write articles. The website is built with EJS, Node JS, and MySQL. The website has features such as user authentication, article management, and comment system. The website will be integrated with media service."
+    },
+    "project3": {
+      "title": "Fruitables Store Website",
+      "description": "An e-commerce website that sells fruits and vegetables. The website is built with PHP and MySQL. The website has features such as product management, shopping cart, and payment system. The website will be integrated with the Stripe payment gateway."
+    },
+    "project4": {
+      "title": "Travel Agency Website",
+      "description": "A website for a travel agency that offers tour packages. The website is built with ReactJS. The website has features such as tour package display, booking system, and contact form. The website will be integrated with the MailChimp email marketing service."
+    },
+    "project5": {
+      "title": "Read-books Application",
+      "description": "A mobile application that allows users to read books. The application is built with React Native. The application has features such as book display, bookmark system, and reading progress tracking. The application was be integrated with the Gutenburge API."
+    },
+    "project6": {
+      "title": "Anime Watching Website",
+      "description": "A website that allows users to watch anime. The website is built with React JS. The website has features such as anime display, episode selection, and comment system. The website was be integrated with the Youtube API v3 and Google Outh 2.0 for login."
+    }
+  },
+  "footer": {
+    "title": "My Portfolio",
+    "description": "This is my portfolio website. Here you can find information about me, my projects, and my experiences. If you have any questions or want to work with me, feel free to contact me.",
+    "tool": "Some tools that I used",
+    "rights": "Designed by Phu Tran. All rights reserved."
   }
 }

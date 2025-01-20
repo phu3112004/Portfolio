@@ -3,9 +3,10 @@
   "home": "Trang chủ",
   "about": "Giới thiệu",
   "project": "Dự án",
-  "footer": "© 2025 Phú Trần. Tất cả các quyền được bảo lưu.",
   "experience": "Kinh nghiệm",
   "skill": "Kỹ năng",
+  "some": "Một số ",
+  "sub-project": "Dưới đây là một số dự án tôi đã thực hiện gần đây.",
   "hero": {
     "title": "Xin chào!",
     "subtitle": "Tôi là",
@@ -58,5 +59,37 @@
       "title": "Lập trình viên Front-end",
       "company": "Nhân viên chính thức tại MISUMI"
     }
+  },
+  "projects": {
+    "project1": {
+      "title": "Trang Web Phát Hiện Mã Độc PDF",
+      "description": "Một ứng dụng web giúp người dùng phát hiện phần mềm độc hại trong các tệp của họ. Ứng dụng sử dụng các thuật toán học máy để phân tích các tệp và cung cấp kết quả. Ứng dụng được xây dựng bằng React JS, Node JS và Python. Ứng dụng sẽ được tích hợp với API VirusTotal."
+    },
+    "project2": {
+      "title": "Trang Web Blog",
+      "description": "Một trang web blog cho phép người dùng đọc và viết bài viết. Trang web được xây dựng bằng EJS, Node JS và MySQL. Trang web có các tính năng như xác thực người dùng, quản lý bài viết và hệ thống bình luận. Trang web sẽ được tích hợp với dịch vụ phương tiện truyền thông."
+    },
+    "project3": {
+      "title": "Trang Web Bán Rau Củ Quả",
+      "description": "Một trang web thương mại điện tử bán trái cây và rau quả. Trang web được xây dựng bằng PHP và MySQL. Trang web có các tính năng như quản lý sản phẩm, giỏ hàng và hệ thống thanh toán. Trang web sẽ được tích hợp với cổng thanh toán Stripe."
+    },
+    "project4": {
+      "title": "Trang Web Đại Lý Du Lịch",
+      "description": "Một trang web của công ty lữ hành cung cấp các gói tour du lịch. Trang web được xây dựng bằng ReactJS. Trang web có các tính năng như hiển thị gói tour du lịch, hệ thống đặt chỗ và biểu mẫu liên hệ. Trang web sẽ được tích hợp với dịch vụ tiếp thị qua email MailChimp."
+    },
+    "project5": {
+      "title": "Ứng Dụng Đọc Sách",
+      "description": "Một ứng dụng di động cho phép người dùng đọc sách. Ứng dụng được xây dựng bằng React Native. Ứng dụng có các tính năng như hiển thị sách, hệ thống đánh dấu trang và theo dõi tiến trình đọc. Ứng dụng đã được tích hợp với API Gutenburge."
+    },
+    "project6": {
+      "title": "Trang Web Xem Anime",
+      "description": "Một trang web cho phép người dùng xem anime. Trang web được xây dựng bằng React JS. Trang web có các tính năng như hiển thị anime, chọn tập phim và hệ thống bình luận. Trang web đã được tích hợp với Youtube API v3 và Google Outh 2.0 để đăng nhập."
+    }
+  },
+  "footer": {
+    "title": "Hồ sơ của tôi",
+    "description": "Đây là trang web hồ sơ của tôi. Tại đây bạn có thể tìm thấy thông tin về tôi, các dự án và kinh nghiệm của tôi. Nếu bạn có bất kỳ câu hỏi nào hoặc muốn làm việc với tôi, hãy liên hệ với tôi.",
+    "tool": "Công cụ tôi đã sử dụng",
+    "rights": "Thiết kế bởi Phú Trần. Tất cả các quyền được bảo vệ."
   }
 }

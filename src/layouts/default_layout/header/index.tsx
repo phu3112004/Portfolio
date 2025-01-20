@@ -38,7 +38,7 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1023) {
       setIsShowMenu(false);
     }
   }, []);
@@ -53,14 +53,14 @@ function Header() {
   }, [theme]);
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1023) {
       setIsShowMenu(false);
     }
   }, [location]);
 
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1023) {
       setIsShowMenu(false);
     }
   };
@@ -71,7 +71,7 @@ function Header() {
 
   const handleChangeMode = () => {
     toggleTheme();
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1023) {
       setIsShowMenu(false);
     }
   };
@@ -80,8 +80,15 @@ function Header() {
     <>
       <header
         style={{
-          backgroundColor:
-            theme === "dark" ? "var(--dark-blue)" : "var(--white)",
+          backgroundColor: isScrolled
+            ? theme === "dark"
+              ? "var(--dark-blue)"
+              : "var(--white)"
+            : window.innerWidth <= 1023
+            ? theme === "dark"
+              ? "var(--dark-blue)"
+              : "var(--white)"
+            : "transparent",
           display: isShowMenu ? "flex" : "none",
           boxShadow: isScrolled ? "0 2px 4px rgba(37, 37, 37, 0.1)" : "none",
         }}

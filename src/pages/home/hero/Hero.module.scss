@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   gap: 100px;
@@ -84,6 +83,7 @@
     .media {
       display: flex;
       gap: 20px;
+      align-items: baseline;
       & > a {
         display: flex;
         justify-content: center;
@@ -97,6 +97,7 @@
         transition: all 0.3s ease;
         &:hover {
           background-color: var(--primary-dark);
+          transform: rotate(360deg);
         }
       }
     }
@@ -124,7 +125,7 @@
         background: transparent;
 
         &:hover {
-          background-color: var(--primary);
+          background-color: var(--primary-dark);
           color: var(--white);
         }
       }
