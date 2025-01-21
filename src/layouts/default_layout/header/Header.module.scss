@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 90px;
   @media screen and (max-width: 1023px) {
     padding: 20px;
     flex-direction: column;
@@ -58,6 +58,10 @@
       li {
         & > h1 {
           color: var(--primary);
+          display: flex;
+          gap: 5px;
+          justify-content: center;
+          align-items: center;
         }
         a {
           text-decoration: none;
@@ -210,6 +214,13 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    & > h1 {
+      color: var(--primary);
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
     .menu-icon {
       background-color: transparent;
       border: none;

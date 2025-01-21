@@ -1,7 +1,10 @@
 import hero from "./images/hero.png";
 import heroBackground from "./images/hero-background.png";
 import aboutAvt from "./images/about-avt.jpg";
-import computer from "./lottie/Animation - 1737361878090.json";
+import computer from "./lottie/computer.json";
+import coder from "./lottie/coder.json";
+import education from "./lottie/education.json";
+import contact from "./lottie/contact.json";
 
 //project
 import pjR from "./images/project-react.jpg";
@@ -71,4 +74,7 @@ export {
   googledrive,
   googletranslate,
   chatgpt,
+  coder,
+  education,
+  contact,
 };

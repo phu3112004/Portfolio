@@ -2,11 +2,14 @@
   "name": "Portfolio",
   "home": "Home",
   "about": "About Me",
+  "contact": "Contact Me",
   "project": "Projects",
   "experience": "Experiences",
+  "address": "Go Vap, Ho Chi Minh City",
   "skill": "Skills",
   "some": "Some of my ",
-  "sub-project": "Here are some recent projects I've completed.",
+  "sub-project": "Some recent projects I've completed",
+  "find": "Find me on",
   "hero": {
     "title": "Hi there!",
     "subtitle": "I'm",
@@ -89,7 +92,28 @@
   "footer": {
     "title": "My Portfolio",
     "description": "This is my portfolio website. Here you can find information about me, my projects, and my experiences. If you have any questions or want to work with me, feel free to contact me.",
-    "tool": "Some tools that I used",
+    "tool": "Some tools I used",
     "rights": "Designed by Phu Tran. All rights reserved."
+  },
+  "know": {
+    "title": "Get to know me",
+    "line1": "Hi everyone! I'm Phu Tran from Ho Chi Minh City, Vietnam.",
+    "line2": "I'm a web developer with a passion for creating beautiful and functional websites.",
+    "line3": "I have experience in front-end development using ReactJS.",
+    "line4": "I am currently employed as a freelance developer.",
+    "line5": "Besides coding, some other activities that I love to do!",
+    "line6": "Random quote:",
+    "activities": {
+      "activity1": "Traveling",
+      "activity2": "Karaoke",
+      "activity3": "Playing guitar",
+      "activity4": "Photography"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "school": "University of Information Technology, Ho Chi Minh City",
+    "major": "Bachelor of Information Technology (Vietnam - Japan)",
+    "time": "Jun 8th, 2026"
   }
 }

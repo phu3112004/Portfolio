@@ -18,6 +18,7 @@ import {
   github,
   typescript,
 } from "assets/index";
+import SkillItem from "components/skill_item";
 
 const cx = classNames.bind(styles);
 
@@ -42,162 +43,19 @@ function Skill() {
             pauseOnHover={true}
             className={cx("marquee")}
           >
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={cpp} alt="C++" />
-              C++
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={php} alt="PHP" />
-              PHP
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={html} alt="HTML" />
-              HTML
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={css} alt="CSS" />
-              CSS
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={javascript} alt="Javascript" />
-              Javascript
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={typescript} alt="ts" />
-              Typescript
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={react} alt="React" />
-              ReactJS
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={node} alt="NodeJS" />
-              NodeJS
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={mysql} alt="MySQL" />
-              MySQL
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={bootstrap} alt="Bootstrap" />
-              Bootstrap
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={sass} alt="Sass" />
-              Sass
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={git} alt="Git" />
-              Git
-            </div>
-            <div
-              className={cx("item")}
-              style={{
-                backgroundColor:
-                  theme === "dark" ? "var(--blueberry)" : "var(--light-gray)",
-                borderColor: theme === "dark" ? "var(--blue)" : "var(--gray)",
-                color: theme === "dark" ? "var(--white)" : "var(--black)",
-              }}
-            >
-              <img src={github} alt="Github" />
-              Github
-            </div>
+            <SkillItem name="C++" image={cpp} />
+            <SkillItem name="HTML" image={html} />
+            <SkillItem name="CSS" image={css} />
+            <SkillItem name="JavaScript" image={javascript} />
+            <SkillItem name="PHP" image={php} />
+            <SkillItem name="ReacJS" image={react} />
+            <SkillItem name="NodeJS" image={node} />
+            <SkillItem name="MySQL" image={mysql} />
+            <SkillItem name="Bootstrap" image={bootstrap} />
+            <SkillItem name="Sass" image={sass} />
+            <SkillItem name="Git" image={git} />
+            <SkillItem name="GitHub" image={github} />
+            <SkillItem name="TypeScript" image={typescript} />
           </Marquee>
         </div>
       </div>

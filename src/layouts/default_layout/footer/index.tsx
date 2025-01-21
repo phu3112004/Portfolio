@@ -34,11 +34,26 @@ function Footer() {
             className={cx("content-left")}
             style={{ color: theme === "dark" ? "white" : "black" }}
           >
-            <h1>{t("footer.title")}</h1>
+            <h1
+              style={{
+                borderBottomColor: theme === "dark" ? "white" : "black",
+              }}
+              className={cx("title")}
+            >
+              {t("footer.title")}
+            </h1>
             <p>{t("footer.description")}</p>
           </div>
-          <div className={cx("content-right")}>
-            <h1 style={{ color: theme === "dark" ? "white" : "black" }}>
+          <div
+            className={cx("content-right")}
+            style={{ color: theme === "dark" ? "white" : "black" }}
+          >
+            <h1
+              style={{
+                borderBottomColor: theme === "dark" ? "white" : "black",
+              }}
+              className={cx("title")}
+            >
               {t("footer.tool")}
             </h1>
             <div className={cx("content-right-icons")}>

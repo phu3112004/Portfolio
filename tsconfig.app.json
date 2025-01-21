@@ -27,11 +27,11 @@
       "@/": ["./src/"],
       "components/*": ["./src/components/*"],
       "pages/*": ["./src/pages/*"],
-      "utils/*": ["./src/utils/*"],
       "assets/*": ["./src/assets/*"],
       "routes/*": ["./src/routes/*"],
       "layouts/*": ["./src/layouts/*"],
-      "contexts/*": ["./src/contexts/*"]
+      "contexts/*": ["./src/contexts/*"],
+      "data/*": ["./src/data/*"]
     }
   },
   "include": ["src"]

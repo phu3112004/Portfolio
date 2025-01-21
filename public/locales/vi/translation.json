@@ -2,11 +2,14 @@
   "name": "Hồ sơ",
   "home": "Trang chủ",
   "about": "Giới thiệu",
+  "contact": "Liên hệ với tôi",
   "project": "Dự án",
+  "address": "Gò Vấp, Thành phố Hồ Chí Minh",
   "experience": "Kinh nghiệm",
   "skill": "Kỹ năng",
   "some": "Một số ",
-  "sub-project": "Dưới đây là một số dự án tôi đã thực hiện gần đây.",
+  "sub-project": "Dưới đây là dự án tôi đã thực hiện gần đây",
+  "find": "Tìm tôi qua",
   "hero": {
     "title": "Xin chào!",
     "subtitle": "Tôi là",
@@ -89,7 +92,28 @@
   "footer": {
     "title": "Hồ sơ của tôi",
     "description": "Đây là trang web hồ sơ của tôi. Tại đây bạn có thể tìm thấy thông tin về tôi, các dự án và kinh nghiệm của tôi. Nếu bạn có bất kỳ câu hỏi nào hoặc muốn làm việc với tôi, hãy liên hệ với tôi.",
-    "tool": "Công cụ tôi đã sử dụng",
+    "tool": "Một số công cụ áp dụng",
     "rights": "Thiết kế bởi Phú Trần. Tất cả các quyền được bảo vệ."
+  },
+  "know": {
+    "title": "Một số điều bạn cần biết về tôi",
+    "line1": "Xin chào mọi người! Tôi là Phú Trần đến từ Thành phố Hồ Chí Minh, Việt Nam.",
+    "line2": "Tôi là một nhà phát triển web với niềm đam mê tạo ra các trang web đẹp và hữu ích.",
+    "line3": "Tôi có kinh nghiệm phát triển front-end bằng ReactJS.",
+    "line4": "Hiện tại tôi đang làm việc với tư cách là một nhà phát triển tự do.",
+    "line5": "Ngoài việc viết mã, tôi còn thích làm một số hoạt động khác!",
+    "line6": "Thông điệp ngẫu nhiên:",
+    "activities": {
+      "activity1": "Đi du lịch",
+      "activity2": "Hát Karaoke",
+      "activity3": "Chơi guitar",
+      "activity4": "Nhiếp ảnh"
+    }
+  },
+  "education": {
+    "title": "Học vấn",
+    "school": "Trường Đại học Công nghệ Thông tin, Thành phố Hồ Chí Minh",
+    "major": "Cử nhân Công nghệ Thông tin (Việt - Nhật)",
+    "time": "Ngày 8, tháng Sáu, 2026"
   }
 }

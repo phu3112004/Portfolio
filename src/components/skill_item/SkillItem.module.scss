@@ -1,0 +1,38 @@
+.item {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  margin-right: 50px;
+  font-size: 20px;
+  border: 1px solid var(--gray);
+  transition: all 0.3s ease;
+  @media screen and (max-width: 1023px) {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    font-size: 16px;
+    & > img {
+      width: 75px !important;
+      height: 75px !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
+  & > img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  &:hover {
+    transform: scale(1.15);
+    z-index: 1;
+    border-color: var(--pink) !important;
+    color: var(--pink) !important;
+    box-shadow: #cf336c33 0px 2px 4px 0px, #cf336c33 0px 2px 16px 0px;
+  }
+}

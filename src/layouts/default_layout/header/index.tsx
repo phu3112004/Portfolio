@@ -4,6 +4,7 @@ import {
   faMoon,
   faBars,
   faClose,
+  faUserAstronaut,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "contexts/theme_context";
 import { useTranslation } from "react-i18next";
@@ -97,7 +98,10 @@ function Header() {
         <div className={cx("header__menu")}>
           <ul>
             <li>
-              <h1>{t("name")}</h1>
+              <h1>
+                <FontAwesomeIcon color="#cf3339" icon={faUserAstronaut} />
+                {t("name")}
+              </h1>
               <button className={cx("close")} onClick={showMenu}>
                 <FontAwesomeIcon color="#cf3339" icon={faClose} />
               </button>
@@ -233,7 +237,10 @@ function Header() {
         className={cx("header__mobile")}
       >
         <div className={cx("header__mobile__menu")}>
-          <h1>{t("name")}</h1>
+          <h1>
+            <FontAwesomeIcon color="#cf3339" icon={faUserAstronaut} />
+            {t("name")}
+          </h1>
           <button className={cx("menu-icon")} onClick={showMenu}>
             <FontAwesomeIcon color="#cf3339" icon={faBars} size="2x" />
           </button>
