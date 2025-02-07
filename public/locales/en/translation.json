@@ -65,8 +65,8 @@
   },
   "projects": {
     "project1": {
-      "title": "PDF Malware Detection Web",
-      "description": "A web application that helps users to detect malware in their files. The application uses machine learning algorithms to analyze the files and provide the result. The application is built with React JS, Node JS, and Python. The application will be integrated with the VirusTotal API."
+      "title": "PDF Malware Scan Website",
+      "description": "A web application that helps users to detect malware in PDF. The application uses machine learning algorithms to analyze PDF and provide the result. The application is built with React JS, Node JS, and Python. The application will be integrated with the VirusTotal API."
     },
     "project2": {
       "title": "Blog Website",

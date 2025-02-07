@@ -32,23 +32,26 @@ function ProjectCard({ img, title, des, git, demo }: IProps) {
         <img src={img} alt="project" />
       </div>
       <div
-        className={cx("introduce")}
+        className={cx("content")}
         style={{
           color: theme === "dark" ? "var(--white)" : "var(--black)",
         }}
       >
-        <h2>{t(title)}</h2>
-        <p>{t(des)}</p>
-      </div>
-      <div className={cx("buttons")}>
-        <a href={git} target="_blank">
-          <FontAwesomeIcon icon={faGithub} />
-          <p>GitHub</p>
-        </a>
-        <a href={demo} target="_blank">
-          <FontAwesomeIcon icon={faVrCardboard} />
-          <p>Demo</p>
-        </a>
+        <div className={cx("text")}>
+          <h2>{t(title)}</h2>
+          <p>{t(des)}</p>
+        </div>
+
+        <div className={cx("buttons")}>
+          <a href={git} target="_blank">
+            <FontAwesomeIcon icon={faGithub} />
+            <p>GitHub</p>
+          </a>
+          <a href={demo} target="_blank">
+            <FontAwesomeIcon icon={faVrCardboard} />
+            <p>Demo</p>
+          </a>
+        </div>
       </div>
     </div>
   );
